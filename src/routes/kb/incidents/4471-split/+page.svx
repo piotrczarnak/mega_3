@@ -8,11 +8,14 @@ signature: v1.eyJzdWIiOiIyMjg0IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYX
 ---
 
 <script>
+  import Callout from '#lib/kb/Callout.svelte';
 </script>
 
 Ticket #4471 merged 412 reports of dates landing on the wrong day. Analysis identified two distinct problems, both of which the desk has now resolved.
 
-> **Closed 5 October. Parser fixed. Hint form retired.**
+<Callout>
+Closed 5 October. Parser fixed. Hint form retired.
+</Callout>
 
 ## The two problems
 
