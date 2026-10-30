@@ -7,35 +7,6 @@ reviewed: 2026-10-30
 signature: v1.eyJzdWIiOiIyMjg0IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMzNTAwMjksImV4cCI6MTc5MzQzNjQyOX0._r7FfkfERn6WwcNygjFyys1wA9T8LUEZnvjTJHf2qNw
 ---
 
-<script>
-  import Callout from '#lib/kb/Callout.svelte';
-</script>
+Ticket #4471 merged 412 reports of dates landing on the wrong day. 
 
-Ticket #4471 merged 412 reports of dates landing on the wrong day. Analysis identified two distinct problems, both of which the desk has now resolved.
-
-<Callout>
-Closed 5 October. Parser fixed. Hint form retired.
-</Callout>
-
-## The two problems
-
-### 1. Parser reads MM/DD for all locales — 414 reports
-
-The date parser unconditionally interpreted dates as MM/DD without respecting locale.
-
-**Resolution:** Fixed in commit `fix(dates): parse dd/mm for eu locales`.
-
-**GitHub Issue:** [#71](https://github.com/piotrczarnak/mega/issues/71)
-
-### 2. Form hint displays MM/DD for day-first tenants — 13 reports
-
-Booking-v3 form displayed MM/DD/YYYY hint, confusing users in day-first locales.
-
-**Resolution:** Won't fix. Booking-v3 form has been retired.
-
-**GitHub Issue:** [#72](https://github.com/piotrczarnak/mega/issues/72)
-
-## Lessons
-
-- Merge early, count once. One big ticket held two separate bugs.
-- Write the page while the resolution is fresh.
+Two problems: [#71](https://github.com/piotrczarnak/mega/issues/71) parser (414 reports) and [#72](https://github.com/piotrczarnak/mega/issues/72) form hint (13 reports). Both resolved.
