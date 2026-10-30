@@ -7,6 +7,9 @@ reviewed: 2026-10-30
 signature: v1.eyJzdWIiOiIyMjg0IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMzNTAwMjksImV4cCI6MTc5MzQzNjQyOX0._r7FfkfERn6WwcNygjFyys1wA9T8LUEZnvjTJHf2qNw
 ---
 
+<script>
+</script>
+
 Ticket #4471 merged 412 reports of dates landing on the wrong day. Analysis identified two distinct problems, both of which the desk has now resolved.
 
 > **Closed 5 October. Parser fixed. Hint form retired.**
