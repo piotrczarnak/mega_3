@@ -1,0 +1,7 @@
+en-GB|pale.harbour|2
+en-GB|stone.and.sons|2
+en-GB|alder.physio|2
+en-US|harbour.dental|2
+en-US|long.table|2
+en-US|lantern.row|1
+en-US|kettle.books|1

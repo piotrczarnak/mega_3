@@ -1,0 +1,24 @@
+---
+layout: runbook
+title: '#4471 · two problems identified, both resolved'
+owner: support desk
+status: closed
+reviewed: 2026-10-30
+signature: v1.eyJzdWIiOiIyMjg0IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMzNTAwMjksImV4cCI6MTc5MzQzNjQyOX0._r7FfkfERn6WwcNygjFyys1wA9T8LUEZnvjTJHf2qNw
+---
+
+Ticket #4471 merged 412 reports of dates landing on the wrong day. Analysis identified two distinct problems, both of which the desk has now resolved.
+
+## The problems
+
+### #71 · Parser reads MM/DD for all locales — 414 reports
+
+The date parser unconditionally interpreted dates as MM/DD without respecting locale. **Fixed in commit `fix(dates): parse dd/mm for eu locales`.**
+
+### #72 · Form hint displays MM/DD for day-first tenants — 13 reports
+
+Booking-v3 form displayed MM/DD/YYYY hint, confusing users in day-first locales. **Won't fix: form has been retired.**
+
+## Status
+
+Closed 5 October. Both problems resolved.
