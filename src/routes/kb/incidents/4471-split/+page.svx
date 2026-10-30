@@ -7,6 +7,10 @@ reviewed: 2026-10-30
 signature: v1.eyJzdWIiOiIyMjg0IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMzNTAwMjksImV4cCI6MTc5MzQzNjQyOX0._r7FfkfERn6WwcNygjFyys1wA9T8LUEZnvjTJHf2qNw
 ---
 
+<script>
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
 Ticket #4471 merged 412 reports of dates landing on the wrong day. Analysis identified two distinct problems, both of which the desk has now resolved.
 
 > **Closed 5 October. Parser fixed. Hint form retired.**
@@ -23,7 +27,7 @@ The date parser unconditionally interpreted dates as MM/DD without respecting lo
 
 **Status:** Closed, fixed.
 
-**GitHub Issue:** #71
+**GitHub Issue:** [#71](https://github.com/piotrczarnak/mega/issues/71)
 
 ### 2. Form hint displays MM/DD for day-first tenants (13 reports) — WON'T FIX
 
@@ -33,7 +37,7 @@ Booking-v3 form displayed MM/DD/YYYY hint, confusing users in day-first locales.
 
 **Status:** Closed, form retired.
 
-**GitHub Issue:** #72
+**GitHub Issue:** [#72](https://github.com/piotrczarnak/mega/issues/72)
 
 ## Why both issues are resolved
 
@@ -42,3 +46,5 @@ The root causes have been addressed by the desk:
 - Form hint problem: Form withdrawn from service
 
 Both contributed to #4471's 412 reports. With these changes, the underlying issues affecting users are resolved.
+
+<RenderStamp {signature} />
