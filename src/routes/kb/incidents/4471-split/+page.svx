@@ -15,36 +15,27 @@ Ticket #4471 merged 412 reports of dates landing on the wrong day. Analysis iden
 
 > **Closed 5 October. Parser fixed. Hint form retired.**
 
-## The two problems and their resolution
+## The two problems
 
-### 1. Parser reads MM/DD for all locales (414 reports) — FIXED
+### 1. Parser reads MM/DD for all locales — 414 reports
 
 The date parser unconditionally interpreted dates as MM/DD without respecting locale.
 
-**Resolution:** Fixed in commit `fix(dates): parse dd/mm for eu locales`. The parser now detects locale and parses dates correctly:
-- DD/MM for day-first locales (en-GB, en-IE, pl-PL, it-IT, nl-NL, fr-FR, cs-CZ, da-DK, pt-PT, es-ES, de-DE)
-- MM/DD for month-first locales (en-US, etc.)
-
-**Status:** Closed, fixed.
+**Resolution:** Fixed in commit `fix(dates): parse dd/mm for eu locales`.
 
 **GitHub Issue:** [#71](https://github.com/piotrczarnak/mega/issues/71)
 
-### 2. Form hint displays MM/DD for day-first tenants (13 reports) — WON'T FIX
+### 2. Form hint displays MM/DD for day-first tenants — 13 reports
 
 Booking-v3 form displayed MM/DD/YYYY hint, confusing users in day-first locales.
 
-**Resolution:** Won't fix. Booking-v3 form has been retired. Day-first tenants no longer use this form, eliminating the problem.
-
-**Status:** Closed, form retired.
+**Resolution:** Won't fix. Booking-v3 form has been retired.
 
 **GitHub Issue:** [#72](https://github.com/piotrczarnak/mega/issues/72)
 
-## Why both issues are resolved
+## Lessons
 
-The root causes have been addressed by the desk:
-- Parser problem: Code fix deployed
-- Form hint problem: Form withdrawn from service
-
-Both contributed to #4471's 412 reports. With these changes, the underlying issues affecting users are resolved.
+- Merge early, count once. One big ticket held two separate bugs.
+- Write the page while the resolution is fresh.
 
 <RenderStamp {signature} />
