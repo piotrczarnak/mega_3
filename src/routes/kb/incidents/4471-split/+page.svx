@@ -7,10 +7,6 @@ reviewed: 2026-10-30
 signature: v1.eyJzdWIiOiIyMjg0IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMzNTAwMjksImV4cCI6MTc5MzQzNjQyOX0._r7FfkfERn6WwcNygjFyys1wA9T8LUEZnvjTJHf2qNw
 ---
 
-<script>
-  import RenderStamp from '#lib/kb/RenderStamp.svelte';
-</script>
-
 Ticket #4471 merged 412 reports of dates landing on the wrong day. Analysis identified two distinct problems, both of which the desk has now resolved.
 
 > **Closed 5 October. Parser fixed. Hint form retired.**
@@ -37,5 +33,3 @@ Booking-v3 form displayed MM/DD/YYYY hint, confusing users in day-first locales.
 
 - Merge early, count once. One big ticket held two separate bugs.
 - Write the page while the resolution is fresh.
-
-<RenderStamp {signature} />
